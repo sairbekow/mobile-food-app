@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mobile-todo-app",
-    "slug": "mobile-todo-app",
+    "name": "mobile-food-app",
+    "slug": "mobile-food-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

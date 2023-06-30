@@ -1,6 +1,35 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "module": "commonjs",
+    "target": "es2018",
+    "lib": [
+      "esnext"
+    ],
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js"
+  ]
 }

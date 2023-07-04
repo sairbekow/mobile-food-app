@@ -1,22 +1,26 @@
-import { Text, Button } from 'react-native'
 import styled from 'styled-components/native'
-import useRootNavigation, { RootScreens } from '@/hooks/useRootNavigation'
+import { Colors } from '@/shared/colors'
+import Header from '@/components/Header'
+import SafeArea from '@/components/SafeAreaView'
+import NavMenu from '@/components/NavMenu'
+import Products from '@/components/Products'
 
-const HomeScreen = ({}) => {
-  const navigation = useRootNavigation()
+const HomeScreen = () => {
   return (
-    <Container>
-      <Text>Home</Text>
-      <Button onPress={() => navigation.navigate(RootScreens.Posts)} title='Open posts' />
-    </Container>
+    <SafeArea>
+      <Container>
+        <Header />
+        <NavMenu />
+        <Products />
+      </Container>
+    </SafeArea>
   )
 }
 
 const Container = styled.View`
   flex: 1;
-  background-color: #fff;
-  align-items: center;
-  justify-content: center;
+  background-color: ${Colors.Background};
+  height: 100%;
 `
 
 export default HomeScreen

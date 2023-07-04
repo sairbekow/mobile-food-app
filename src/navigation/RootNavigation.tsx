@@ -4,20 +4,12 @@ import { RootScreens } from '@/hooks/useRootNavigation'
 import HomeScreen from '@/screens/HomeScreen'
 import PostsScreen from '@/screens/PostsScreen'
 
-// const MyTheme = {
-//   ...DefaultTheme,
-//   colors: {
-//     ...DefaultTheme.colors,
-//     background: Colors.White,
-//   },
-// }
-
 const RootStack = createNativeStackNavigator()
 
 const RootNavigation = () => {
   return (
     <NavigationContainer>
-      <RootStack.Navigator>
+      <RootStack.Navigator screenOptions={{ headerShown: false }}>
         <RootStack.Screen name={RootScreens.Home} component={HomeScreen} />
         <RootStack.Screen name={RootScreens.Posts} component={PostsScreen} />
       </RootStack.Navigator>
